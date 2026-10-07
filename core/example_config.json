@@ -1,0 +1,35 @@
+{
+  "sources": [
+    {
+      "id": "nginx-access",
+      "category": "web",
+      "enabled": false,
+      "type": "file",
+      "paths": [
+        "/var/log/nginx/access.log"
+      ],
+      "parser": "nginx_access"
+    },
+    {
+      "id": "apache-access",
+      "category": "web",
+      "enabled": true,
+      "type": "file",
+      "paths": [
+        "/var/log/apache/access.log"
+      ],
+      "parser": "apache_access"
+    },
+    {
+      "id": "linux-auth",
+      "category": "authentication",
+      "enabled": true,
+      "type": "file",
+      "paths": [
+        "/var/log/auth.log",
+        "/var/log/secure"
+      ],
+      "parser": "linux_auth"
+    }
+  ]
+}
